@@ -1,0 +1,326 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD993FED16FE3A2100460A3B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD993FEC16FE3A2100460A3B /* UIKit.framework */; };
+		BD993FEF16FE3A2100460A3B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD993FEE16FE3A2100460A3B /* Foundation.framework */; };
+		BD993FF116FE3A2100460A3B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD993FF016FE3A2100460A3B /* CoreGraphics.framework */; };
+		BD993FF716FE3A2100460A3B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD993FF516FE3A2100460A3B /* InfoPlist.strings */; };
+		BD993FF916FE3A2100460A3B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD993FF816FE3A2100460A3B /* main.m */; };
+		BD993FFD16FE3A2100460A3B /* NGAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BD993FFC16FE3A2100460A3B /* NGAppDelegate.m */; };
+		BD993FFF16FE3A2100460A3B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = BD993FFE16FE3A2100460A3B /* Default.png */; };
+		BD99400116FE3A2100460A3B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD99400016FE3A2100460A3B /* Default@2x.png */; };
+		BD99400316FE3A2100460A3B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BD99400216FE3A2100460A3B /* Default-568h@2x.png */; };
+		BD99400616FE3A2200460A3B /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD99400416FE3A2200460A3B /* MainStoryboard_iPhone.storyboard */; };
+		BD99400916FE3A2200460A3B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD99400716FE3A2200460A3B /* MainStoryboard_iPad.storyboard */; };
+		BD99400C16FE3A2200460A3B /* NGMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD99400B16FE3A2200460A3B /* NGMasterViewController.m */; };
+		BD99400F16FE3A2200460A3B /* NGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD99400E16FE3A2200460A3B /* NGDetailViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		BD993FE916FE3A2100460A3B /* Ominus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ominus.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD993FEC16FE3A2100460A3B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		BD993FEE16FE3A2100460A3B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BD993FF016FE3A2100460A3B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		BD993FF416FE3A2100460A3B /* Ominus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Ominus-Info.plist"; sourceTree = "<group>"; };
+		BD993FF616FE3A2100460A3B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BD993FF816FE3A2100460A3B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BD993FFA16FE3A2100460A3B /* Ominus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Ominus-Prefix.pch"; sourceTree = "<group>"; };
+		BD993FFB16FE3A2100460A3B /* NGAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGAppDelegate.h; sourceTree = "<group>"; };
+		BD993FFC16FE3A2100460A3B /* NGAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGAppDelegate.m; sourceTree = "<group>"; };
+		BD993FFE16FE3A2100460A3B /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		BD99400016FE3A2100460A3B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		BD99400216FE3A2100460A3B /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		BD99400516FE3A2200460A3B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		BD99400816FE3A2200460A3B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		BD99400A16FE3A2200460A3B /* NGMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGMasterViewController.h; sourceTree = "<group>"; };
+		BD99400B16FE3A2200460A3B /* NGMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGMasterViewController.m; sourceTree = "<group>"; };
+		BD99400D16FE3A2200460A3B /* NGDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGDetailViewController.h; sourceTree = "<group>"; };
+		BD99400E16FE3A2200460A3B /* NGDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGDetailViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD993FE616FE3A2100460A3B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD993FED16FE3A2100460A3B /* UIKit.framework in Frameworks */,
+				BD993FEF16FE3A2100460A3B /* Foundation.framework in Frameworks */,
+				BD993FF116FE3A2100460A3B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD993FE016FE3A2100460A3B = {
+			isa = PBXGroup;
+			children = (
+				BD993FF216FE3A2100460A3B /* Ominus */,
+				BD993FEB16FE3A2100460A3B /* Frameworks */,
+				BD993FEA16FE3A2100460A3B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD993FEA16FE3A2100460A3B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD993FE916FE3A2100460A3B /* Ominus.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD993FEB16FE3A2100460A3B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD993FEC16FE3A2100460A3B /* UIKit.framework */,
+				BD993FEE16FE3A2100460A3B /* Foundation.framework */,
+				BD993FF016FE3A2100460A3B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD993FF216FE3A2100460A3B /* Ominus */ = {
+			isa = PBXGroup;
+			children = (
+				BD993FFB16FE3A2100460A3B /* NGAppDelegate.h */,
+				BD993FFC16FE3A2100460A3B /* NGAppDelegate.m */,
+				BD99400416FE3A2200460A3B /* MainStoryboard_iPhone.storyboard */,
+				BD99400716FE3A2200460A3B /* MainStoryboard_iPad.storyboard */,
+				BD99400A16FE3A2200460A3B /* NGMasterViewController.h */,
+				BD99400B16FE3A2200460A3B /* NGMasterViewController.m */,
+				BD99400D16FE3A2200460A3B /* NGDetailViewController.h */,
+				BD99400E16FE3A2200460A3B /* NGDetailViewController.m */,
+				BD993FF316FE3A2100460A3B /* Supporting Files */,
+			);
+			path = Ominus;
+			sourceTree = "<group>";
+		};
+		BD993FF316FE3A2100460A3B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BD993FF416FE3A2100460A3B /* Ominus-Info.plist */,
+				BD993FF516FE3A2100460A3B /* InfoPlist.strings */,
+				BD993FF816FE3A2100460A3B /* main.m */,
+				BD993FFA16FE3A2100460A3B /* Ominus-Prefix.pch */,
+				BD993FFE16FE3A2100460A3B /* Default.png */,
+				BD99400016FE3A2100460A3B /* Default@2x.png */,
+				BD99400216FE3A2100460A3B /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD993FE816FE3A2100460A3B /* Ominus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD99401216FE3A2200460A3B /* Build configuration list for PBXNativeTarget "Ominus" */;
+			buildPhases = (
+				BD993FE516FE3A2100460A3B /* Sources */,
+				BD993FE616FE3A2100460A3B /* Frameworks */,
+				BD993FE716FE3A2100460A3B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Ominus;
+			productName = Ominus;
+			productReference = BD993FE916FE3A2100460A3B /* Ominus.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD993FE116FE3A2100460A3B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = NG;
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Noble Gesture";
+			};
+			buildConfigurationList = BD993FE416FE3A2100460A3B /* Build configuration list for PBXProject "Ominus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BD993FE016FE3A2100460A3B;
+			productRefGroup = BD993FEA16FE3A2100460A3B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD993FE816FE3A2100460A3B /* Ominus */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD993FE716FE3A2100460A3B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD993FF716FE3A2100460A3B /* InfoPlist.strings in Resources */,
+				BD993FFF16FE3A2100460A3B /* Default.png in Resources */,
+				BD99400116FE3A2100460A3B /* Default@2x.png in Resources */,
+				BD99400316FE3A2100460A3B /* Default-568h@2x.png in Resources */,
+				BD99400616FE3A2200460A3B /* MainStoryboard_iPhone.storyboard in Resources */,
+				BD99400916FE3A2200460A3B /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD993FE516FE3A2100460A3B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD993FF916FE3A2100460A3B /* main.m in Sources */,
+				BD993FFD16FE3A2100460A3B /* NGAppDelegate.m in Sources */,
+				BD99400C16FE3A2200460A3B /* NGMasterViewController.m in Sources */,
+				BD99400F16FE3A2200460A3B /* NGDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		BD993FF516FE3A2100460A3B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD993FF616FE3A2100460A3B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BD99400416FE3A2200460A3B /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD99400516FE3A2200460A3B /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		BD99400716FE3A2200460A3B /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD99400816FE3A2200460A3B /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD99401016FE3A2200460A3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD99401116FE3A2200460A3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD99401316FE3A2200460A3B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ominus/Ominus-Prefix.pch";
+				INFOPLIST_FILE = "Ominus/Ominus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BD99401416FE3A2200460A3B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Ominus/Ominus-Prefix.pch";
+				INFOPLIST_FILE = "Ominus/Ominus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD993FE416FE3A2100460A3B /* Build configuration list for PBXProject "Ominus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD99401016FE3A2200460A3B /* Debug */,
+				BD99401116FE3A2200460A3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD99401216FE3A2200460A3B /* Build configuration list for PBXNativeTarget "Ominus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD99401316FE3A2200460A3B /* Debug */,
+				BD99401416FE3A2200460A3B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD993FE116FE3A2100460A3B /* Project object */;
+}
