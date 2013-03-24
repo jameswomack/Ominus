@@ -52,20 +52,17 @@
 
 - (void)establishObservation
 {
-    NGNimbleCenterObserveName(NGReadyNamePath, ^(NSNotification *note) {
-        if (note.hash.notificationType == NGNotificationTypePath)
-        {            
-            NSURL *url = [NSURL.alloc initFileURLWithPath:note.hash.path];
-            
-            AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:url options:nil];
-            
-            NGNotificationHash *hash = [NGNotificationHash hashWithType:NGNotificationTypeURLAsset andObject:urlAsset];
-            
-            [NSNotification notificationWithName:NGReadyNameAssetURL andHash:hash shouldAutoPost:YES];
-        }
-    });
+    [self observeName:NGReadyNamePath usingBlock:^(NSNotification *note) {
+        NSURL *url = [NSURL.alloc initFileURLWithPath:note.hash.path];
+        
+        AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:url options:nil];
+        
+        NGNotificationHash *hash = [NGNotificationHash hashWithType:NGNotificationTypeURLAsset andObject:urlAsset];
+        
+        [NSNotification notificationWithName:NGReadyNameAssetURL andHash:hash shouldAutoPost:YES];
+    }];
     
-    NGNimbleCenterObserveName(NGReadyNameAssetURL, ^(NSNotification *note) {        
+    [self observeName:NGReadyNameAssetURL usingBlock:^(NSNotification *note) {
         AVPlayerItem *item = [AVPlayerItem playerItemWithAsset:note.hash.urlAsset];
         
         if (self.player == nil)
@@ -76,7 +73,17 @@
         {
             [self.player replaceCurrentItemWithPlayerItem:item];
         }
-    });
+    }];
+    
+    [self observeName:NGReadyNameSeconds usingBlock:^(NSNotification *note) {
+        CGFloat seconds = note.hash.seconds;
+        
+        NGLog(@"%f %@", seconds, self.player.currentItem);
+        
+        [self.player seekToTime:CMTimeMake(seconds, NSEC_PER_SEC)];
+        
+        self.player.playing ? [self.player pause] : [self.player play];
+    }];
 }
 
 

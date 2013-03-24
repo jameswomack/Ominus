@@ -11,9 +11,10 @@
 typedef NS_ENUM(NSInteger, NGNotificationType)
 {
     NGNotificationTypePath = 7,
-    NGNotificationTypeURLAsset = 8,
+    NGNotificationTypeURLAsset,
+    NGNotificationTypeSeconds,
     NGNotificationTypeSize,
-    NGNotificationTypeCount = 2
+    NGNotificationTypeCount = 3
 };
 
 NS_CLASS_AVAILABLE(10_7, 5_0)
@@ -30,6 +31,7 @@ NS_CLASS_AVAILABLE(10_7, 5_0)
 #pragma mark NGNotificationType-dependent exception-raising dynamic properties
 @property (readonly) AVURLAsset *urlAsset;
 @property (readonly) NSString *path;
+@property (readonly) CGFloat seconds;
 
 #pragma mark NGNotificationType-based initialization
 + (NGNotificationHash *)hashWithType:(NGNotificationType)type andObject:(id)object;

@@ -13,7 +13,7 @@
 #define absX(x) (x<0?0-x:x)
 #define minMaxX(x,mn,mx) (x<=mn?mn:(x>=mx?mx:x))
 #define noiseFloor (-50.0)
-#define decibel(amplitude) (20.0 * log10(absX(amplitude)/32767.0))
+#define decibel(amplitude) (20.0  *log10(absX(amplitude)/32767.0))
 #define imgExt @"png"
 #define imageToData(x) UIImagePNGRepresentation(x)
 
@@ -45,18 +45,18 @@
 }
 
 - (void)establishObservation
-{
-    NGNimbleCenterObserveName(NGReadyNameAssetURL, ^(NSNotification *note) {
-        if (note.hash.notificationType == NGNotificationTypeURLAsset)
-        {
-            [self renderPNGAudioPictogramLogForAsset:note.hash.urlAsset];
-        }
-    });
+{    
+    [self observeName:NGReadyNameAssetURL usingBlock:^(NSNotification *note) {
+        self.urlAsset = note.hash.urlAsset;
+        [self renderPNGAudioPictogram];
+    }];
 }
 
 
 - (void)establishGestures
 {
+    self.userInteractionEnabled = self.multipleTouchEnabled = YES;
+    
     UITapGestureRecognizer *doubleTap = [UITapGestureRecognizer.alloc initWithTarget:self action:@selector(play:)];
     
     NSArray *gestureRecognizers = @[doubleTap];
@@ -87,9 +87,23 @@
 
 - (void)play:(UIGestureRecognizer *)gesture
 {
-    if (gesture.state == UIGestureRecognizerStateEnded)
-    {
-        // TODO — Notification with position of tap, and width of view
+    if (gesture.state == UIGestureRecognizerStateEnded && (self.urlAsset))
+    {        
+        CGFloat positionX = [gesture locationInView:self].x;
+        
+        CGFloat width = self.image.size.width;
+        
+        CGFloat positionXScaled = (positionX / width) * 100.f;
+        
+        CMTime duration = self.urlAsset.duration;
+        
+        CGFloat durationSeconds = duration.value / duration.timescale;
+        
+        CGFloat position = durationSeconds * positionXScaled;
+        
+        NGNotificationHash *hash = [NGNotificationHash hashWithType:NGNotificationTypeSeconds andObject:@(position)];
+        
+        [NSNotification notificationWithName:NGReadyNameSeconds andHash:hash shouldAutoPost:YES];
     }
 }
 
@@ -131,7 +145,7 @@
     for (NSInteger intSample = 0; intSample < sampleCount; intSample ++)
     {
         Float32 left = *samples++;
-        float pixels = (left - noiseFloor) * sampleAdjustmentFactor;
+        float pixels = (left - noiseFloor)  *sampleAdjustmentFactor;
         CGContextMoveToPoint(context, intSample, centerLeft-pixels);
         CGContextAddLineToPoint(context, intSample, centerLeft+pixels);
         CGContextSetStrokeColorWithColor(context, leftcolor);
@@ -140,7 +154,7 @@
         if (channelCount == 2)
         {
             Float32 right = *samples++;
-            float pixels = (right - noiseFloor) * sampleAdjustmentFactor;
+            float pixels = (right - noiseFloor)  *sampleAdjustmentFactor;
             CGContextMoveToPoint(context, intSample, centerRight - pixels);
             CGContextAddLineToPoint(context, intSample, centerRight + pixels);
             CGContextSetStrokeColorWithColor(context, rightcolor);
@@ -152,23 +166,22 @@
     
     UIGraphicsEndImageContext();
     
-    NSLog(@"%@",NSStringFromCGSize(newImage.size));
+    NGLog(@"%@",NSStringFromCGSize(newImage.size));
     
     return newImage;
 }
 
 
 
-- (void)renderPNGAudioPictogramLogForAsset:(AVURLAsset *)songAsset
+- (void)renderPNGAudioPictogram
 {    
-    NSError * error = nil;
+    NSError  *error = nil;
     
-    AVAssetReader * reader = [[AVAssetReader alloc] initWithAsset:songAsset error:&error];
+    AVAssetReader *reader = [[AVAssetReader alloc] initWithAsset:self.urlAsset error:&error];
     
-    AVAssetTrack * songTrack = [songAsset.tracks objectAtIndex:0];
+    AVAssetTrack *songTrack = [self.urlAsset.tracks objectAtIndex:0];
     
-    NSDictionary* outputSettingsDict = [[NSDictionary alloc] initWithObjectsAndKeys:
-                                        
+    NSDictionary *outputSettingsDict = [[NSDictionary alloc] initWithObjectsAndKeys:
                                         [NSNumber numberWithInt:kAudioFormatLinearPCM],AVFormatIDKey,
                                         //     [NSNumber numberWithInt:44100.0],AVSampleRateKey, /*Not Supported*/
                                         //     [NSNumber numberWithInt: 2],AVNumberOfChannelsKey,    /*Not Supported*/
@@ -181,17 +194,17 @@
                                         nil];
     
     
-    AVAssetReaderTrackOutput* output = [[AVAssetReaderTrackOutput alloc] initWithTrack:songTrack outputSettings:outputSettingsDict];
+    AVAssetReaderTrackOutput *output = [[AVAssetReaderTrackOutput alloc] initWithTrack:songTrack outputSettings:outputSettingsDict];
     
     [reader addOutput:output];
     
     UInt32 sampleRate,channelCount;
     
-    NSArray* formatDesc = songTrack.formatDescriptions;
+    NSArray *formatDesc = songTrack.formatDescriptions;
     for(unsigned int i = 0; i < formatDesc.count; ++i)
     {
         CMAudioFormatDescriptionRef item = (__bridge CMAudioFormatDescriptionRef)[formatDesc objectAtIndex:i];
-        const AudioStreamBasicDescription* fmtDesc = CMAudioFormatDescriptionGetStreamBasicDescription (item);
+        const AudioStreamBasicDescription *fmtDesc = CMAudioFormatDescriptionGetStreamBasicDescription (item);
         if(fmtDesc)
         {
             sampleRate = fmtDesc->mSampleRate;
@@ -199,9 +212,9 @@
         }
     }
     
-    UInt32 bytesPerSample = 2 * channelCount;
+    UInt32 bytesPerSample = 2  *channelCount;
     Float32 normalizeMax = noiseFloor;
-    NSMutableData * fullSongData = [[NSMutableData alloc] init];
+    NSMutableData  *fullSongData = [[NSMutableData alloc] init];
     [reader startReading];
     
     UInt64 totalBytes = 0;
@@ -214,7 +227,7 @@
     
     while (reader.status == AVAssetReaderStatusReading)
     {
-        AVAssetReaderTrackOutput * trackOutput = (AVAssetReaderTrackOutput *)[reader.outputs objectAtIndex:0];
+        AVAssetReaderTrackOutput  *trackOutput = (AVAssetReaderTrackOutput *)[reader.outputs objectAtIndex:0];
         CMSampleBufferRef sampleBufferRef = [trackOutput copyNextSampleBuffer];
         
         if (sampleBufferRef)
@@ -225,11 +238,11 @@
             totalBytes += length;
             
             
-            NSMutableData * data = [NSMutableData dataWithLength:length];
+            NSMutableData  *data = [NSMutableData dataWithLength:length];
             CMBlockBufferCopyDataBytes(blockBufferRef, 0, length, data.mutableBytes);
             
             
-            SInt16 * samples = (SInt16 *) data.mutableBytes;
+            SInt16  *samples = (SInt16 *) data.mutableBytes;
             int sampleCount = length / bytesPerSample;
             for (int i = 0; i < sampleCount ; i ++) {
                 

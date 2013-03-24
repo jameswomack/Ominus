@@ -8,7 +8,9 @@
 
 
 #import "NSNotification+NGNimbleCenter.h"
+#import "NSObject+NGNimbleCenter.h"
 #import "NGNotificationHash.h"
+#import "AVPlayer+NGKit.h"
 
 
 
@@ -73,8 +75,7 @@
 #define NGReadyNamer(nameComponent) NGString(NGReadyNameTemplate, nameComponent)
 #define NGReadyNamePath NGReadyNamer(@"Path")
 #define NGReadyNameAssetURL NGReadyNamer(@"AssetURL")
-#define NGReadyNameAsset NGReadyNamer(@"Asset")
-#define NGReadyNamePlayer NGReadyNamer(@"Player")
+#define NGReadyNameSeconds NGReadyNamer(@"Seconds")
 
 
 #pragma mark —

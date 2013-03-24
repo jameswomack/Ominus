@@ -32,6 +32,7 @@
 		BDF9023116FF625D00F41708 /* NGKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9023016FF625D00F41708 /* NGKit.m */; };
 		BDF9023716FF8B9500F41708 /* NSObject+NGNimbleCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9023616FF8B9500F41708 /* NSObject+NGNimbleCenter.m */; };
 		BDF9023916FF935C00F41708 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9023816FF935C00F41708 /* AudioToolbox.framework */; };
+		BDF9023C16FF9ECA00F41708 /* AVPlayer+NGKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9023B16FF9ECA00F41708 /* AVPlayer+NGKit.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,8 @@
 		BDF9023516FF8B9500F41708 /* NSObject+NGNimbleCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+NGNimbleCenter.h"; path = "NGKit/NSObject+NGNimbleCenter.h"; sourceTree = "<group>"; };
 		BDF9023616FF8B9500F41708 /* NSObject+NGNimbleCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NGNimbleCenter.m"; path = "NGKit/NSObject+NGNimbleCenter.m"; sourceTree = "<group>"; };
 		BDF9023816FF935C00F41708 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		BDF9023A16FF9ECA00F41708 /* AVPlayer+NGKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "AVPlayer+NGKit.h"; path = "NGKit/AVPlayer+NGKit.h"; sourceTree = "<group>"; };
+		BDF9023B16FF9ECA00F41708 /* AVPlayer+NGKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "AVPlayer+NGKit.m"; path = "NGKit/AVPlayer+NGKit.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,8 @@
 				BDF9022D16FF61CD00F41708 /* NGNotificationHash.m */,
 				BDF9023516FF8B9500F41708 /* NSObject+NGNimbleCenter.h */,
 				BDF9023616FF8B9500F41708 /* NSObject+NGNimbleCenter.m */,
+				BDF9023A16FF9ECA00F41708 /* AVPlayer+NGKit.h */,
+				BDF9023B16FF9ECA00F41708 /* AVPlayer+NGKit.m */,
 			);
 			name = NGKit;
 			sourceTree = "<group>";
@@ -298,6 +303,7 @@
 				BDF9022E16FF61CD00F41708 /* NGNotificationHash.m in Sources */,
 				BDF9023116FF625D00F41708 /* NGKit.m in Sources */,
 				BDF9023716FF8B9500F41708 /* NSObject+NGNimbleCenter.m in Sources */,
+				BDF9023C16FF9ECA00F41708 /* AVPlayer+NGKit.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

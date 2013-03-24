@@ -40,7 +40,7 @@ void NSMapInsert(NSMapTable *table, const void *key, const void *value);
 
 @implementation NGNotificationHash
 
-@dynamic wrapped, urlAsset;
+@dynamic wrapped, urlAsset, seconds;
 
 
 
@@ -86,6 +86,7 @@ void NSMapInsert(NSMapTable *table, const void *key, const void *value);
         
         NSMapInsert(noteTypeTable, (void *)NGNotificationTypeURLAsset, AVURLAsset.class);
         NSMapInsert(noteTypeTable, (void *)NGNotificationTypePath, NSString.class);
+        NSMapInsert(noteTypeTable, (void *)NGNotificationTypeSeconds, NSNumber.class);
     });
     
     return noteTypeTable;
@@ -143,6 +144,14 @@ void NSMapInsert(NSMapTable *table, const void *key, const void *value);
     [self assertNoteType:NGNotificationTypePath andClass:NSString.class];
     
     return (NSString *)self.object;
+}
+
+
+- (CGFloat)seconds
+{
+    [self assertNoteType:NGNotificationTypeSeconds andClass:NSNumber.class];
+    
+    return ((NSNumber *)self.object).floatValue;
 }
 
 

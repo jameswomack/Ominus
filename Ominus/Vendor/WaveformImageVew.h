@@ -11,6 +11,8 @@
 @interface WaveformImageVew : UIImageView
 
 #pragma mark Waveform drawing
-- (void)renderPNGAudioPictogramLogForAsset:(AVURLAsset *)songAsset;
+- (void)renderPNGAudioPictogram;
+
+@property (nonatomic, strong) AVURLAsset *urlAsset;
 
 @end
