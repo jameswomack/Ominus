@@ -1,0 +1,51 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+# Xcode
+.DS_Store
+*.xcuserstate
+*.xcbkptlist
+*.xcuserstate
+*/build/*
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+*.xcworkspace
+!default.xcworkspace
+xcuserdata
+profile
+*.moved-aside
+DerivedData
+.idea/
+*.hmap
+*.xcuserstate
+*.xcbkptlist
+
+# cocoapods
+Pods
+
+
+# SSL
+*.certSigningRequest
+*.cer
+*.p12
+
+# Ruby
+*.ruby-version
+server/Gemfile.lock
+server/config/vhost.conf
