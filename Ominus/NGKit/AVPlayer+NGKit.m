@@ -10,7 +10,7 @@
 
 @implementation AVPlayer (NGKit)
 
-@dynamic playing;
+@dynamic playing, stopped;
 
 
 
@@ -18,15 +18,21 @@
 #pragma mark Dynamic property implementations
 
 
-- (BOOL)playing
+- (BOOL)NGPlaying
 {
     return self.rate != 0.0;
 }
 
 
-- (BOOL)stopped
+- (BOOL)NGStopped
 {
     return !self.playing;
+}
+
+
+- (NSTimeInterval)NGCurrentSeconds
+{
+    return NGTimeReal(self.currentTime);
 }
 
 

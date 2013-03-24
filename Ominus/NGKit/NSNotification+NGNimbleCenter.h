@@ -17,6 +17,6 @@
 + (NSNotification *)notificationWithName:(NSString *)name andHash:(NGNotificationHash *)hash shouldAutoPost:(BOOL)shouldAutoPost;
 
 #pragma mark Dynamic property declarations
-@property (readonly) NGNotificationHash *hash;  // Dynamic
+@property (readonly, getter = NGHashObject) NGNotificationHash *hashObject;  // Prefer `hash` in a vaccuum but then there's NSObject::hash
 
 @end

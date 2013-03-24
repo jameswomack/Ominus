@@ -50,7 +50,7 @@ void NSMapInsert(NSMapTable *table, const void *key, const void *value);
 
 + (NGNotificationHash *)hashWithType:(NGNotificationType)type andObject:(id)object
 {
-    return [NGNotificationHash.alloc initWithHashWithType:type andObject:object];
+    return [NGNotificationHash.alloc initWithHashWithType:type andObject:object].autorelease;
 }
 
 
@@ -59,9 +59,7 @@ void NSMapInsert(NSMapTable *table, const void *key, const void *value);
     if ((self = super.init))
     {
         self.notificationType = type;
-        self.object = object;
-        
-        
+        self.object = object;        
     }
     return self;
 }
@@ -147,11 +145,11 @@ void NSMapInsert(NSMapTable *table, const void *key, const void *value);
 }
 
 
-- (CGFloat)seconds
+- (NSTimeInterval)seconds
 {
     [self assertNoteType:NGNotificationTypeSeconds andClass:NSNumber.class];
     
-    return ((NSNumber *)self.object).floatValue;
+    return (NSTimeInterval)((NSNumber *)self.object).doubleValue;
 }
 
 

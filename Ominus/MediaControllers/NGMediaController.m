@@ -53,7 +53,7 @@
 - (void)establishObservation
 {
     [self observeName:NGReadyNamePath usingBlock:^(NSNotification *note) {
-        NSURL *url = [NSURL.alloc initFileURLWithPath:note.hash.path];
+        NSURL *url = [NSURL.alloc initFileURLWithPath:note.hashObject.path];
         
         AVURLAsset *urlAsset = [AVURLAsset URLAssetWithURL:url options:nil];
         
@@ -63,7 +63,7 @@
     }];
     
     [self observeName:NGReadyNameAssetURL usingBlock:^(NSNotification *note) {
-        AVPlayerItem *item = [AVPlayerItem playerItemWithAsset:note.hash.urlAsset];
+        AVPlayerItem *item = [AVPlayerItem playerItemWithAsset:note.hashObject.urlAsset];
         
         if (self.player == nil)
         {
@@ -76,13 +76,14 @@
     }];
     
     [self observeName:NGReadyNameSeconds usingBlock:^(NSNotification *note) {
-        CGFloat seconds = note.hash.seconds;
+        NSTimeInterval secondsRequested = note.hashObject.seconds;
         
-        NGLog(@"%f %@", seconds, self.player.currentItem);
-        
-        [self.player seekToTime:CMTimeMake(seconds, NSEC_PER_SEC)];
-        
-        self.player.playing ? [self.player pause] : [self.player play];
+        [self.player seekToTime:CMTimeMakeWithSeconds(secondsRequested, NSEC_PER_SEC) toleranceBefore:kCMTimeZero toleranceAfter:kCMTimeZero completionHandler:^(BOOL finished) {
+            if (finished)
+            {
+                self.player.playing ? [self.player pause] : [self.player play];
+            }
+        }];        
     }];
 }
 

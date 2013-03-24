@@ -31,7 +31,7 @@ NS_CLASS_AVAILABLE(10_7, 5_0)
 #pragma mark NGNotificationType-dependent exception-raising dynamic properties
 @property (readonly) AVURLAsset *urlAsset;
 @property (readonly) NSString *path;
-@property (readonly) CGFloat seconds;
+@property (readonly) NSTimeInterval seconds;
 
 #pragma mark NGNotificationType-based initialization
 + (NGNotificationHash *)hashWithType:(NGNotificationType)type andObject:(id)object;

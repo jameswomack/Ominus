@@ -47,7 +47,7 @@
 - (void)establishObservation
 {    
     [self observeName:NGReadyNameAssetURL usingBlock:^(NSNotification *note) {
-        self.urlAsset = note.hash.urlAsset;
+        self.urlAsset = note.hashObject.urlAsset;
         [self renderPNGAudioPictogram];
     }];
 }
@@ -91,15 +91,11 @@
     {        
         CGFloat positionX = [gesture locationInView:self].x;
         
-        CGFloat width = self.image.size.width;
+        CGFloat width = self.frame.size.width;
         
-        CGFloat positionXScaled = (positionX / width) * 100.f;
+        CGFloat positionXScaled = positionX / width;
         
-        CMTime duration = self.urlAsset.duration;
-        
-        CGFloat durationSeconds = duration.value / duration.timescale;
-        
-        CGFloat position = durationSeconds * positionXScaled;
+        CGFloat position = NGTimeReal(self.urlAsset.duration) * positionXScaled;
         
         NGNotificationHash *hash = [NGNotificationHash hashWithType:NGNotificationTypeSeconds andObject:@(position)];
         

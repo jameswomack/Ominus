@@ -11,7 +11,7 @@
 
 @implementation NSNotification (NGNimbleCenterAdditions)
 
-@dynamic hash;
+@dynamic hashObject;
 
 
 
@@ -45,7 +45,7 @@
 #pragma mark Dynamic property implementations
 
 
-- (NGNotificationHash *)hash
+- (NGNotificationHash *)NGHashObject
 {
     return self.userInfo[NGNotificationHashKey];
 }

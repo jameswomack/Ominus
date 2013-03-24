@@ -11,6 +11,7 @@
 #import "NSObject+NGNimbleCenter.h"
 #import "NGNotificationHash.h"
 #import "AVPlayer+NGKit.h"
+#import "AVPlayerItem+NGKit.h"
 
 
 
@@ -18,13 +19,6 @@
 #pragma mark Device & OS make, model, configuration, sexual orientation
 
 #define NGDeviceiPad [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad
-
-
-
-#pragma mark —
-#pragma mark Conventions for notifying readers of properties' nature
-
-// Comment in the header next to dynamic properties please
 
 
 
@@ -84,6 +78,11 @@
 #define NGEditingStyleIsDelete(editingStyle) editingStyle == UITableViewCellEditingStyleDelete
 #define NGEditingStyleIsInsert(editingStyle) editingStyle == UITableViewCellEditingStyleInsert
 
+
+#pragma mark —
+#pragma mark CMTime
+
+#define NGTimeReal(time) CMTimeGetSeconds(time)
 
 
 #pragma mark —

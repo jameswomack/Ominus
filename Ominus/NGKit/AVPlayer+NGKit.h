@@ -11,7 +11,8 @@
 @interface AVPlayer (NGKit)
 
 #pragma mark Dynamic property declarations
-@property (readonly) BOOL playing;
-@property (readonly) BOOL stopped;
+@property (readonly, getter = NGPlaying) BOOL playing;
+@property (readonly, getter = NSStopped) BOOL stopped;
+@property (readonly, getter = NGCurrentSeconds) NSTimeInterval currentSeconds;
 
 @end
