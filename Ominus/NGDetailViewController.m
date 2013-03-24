@@ -8,7 +8,7 @@
 
 #import "NGDetailViewController.h"
 
-#import "WaveformImageVew.h"
+#import "WaveformImageView.h"
 
 @interface NGDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
@@ -16,6 +16,23 @@
 @end
 
 @implementation NGDetailViewController
+
+
+
+#pragma mark —
+#pragma mark View lifecycle
+
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (!NGDeviceiPad)
+    {
+        [self setupWaveformView];
+    }
+}
+
+
 
 #pragma mark - Managing the detail item
 
@@ -25,11 +42,10 @@
     {
         _detailItem = newDetailItem;
         
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NGNotificationHash *hash = [NGNotificationHash hashWithType:NGNotificationTypePath andObject:_detailItem];
-            
-            [NSNotification notificationWithName:NGReadyNamePath andHash:hash shouldAutoPost:YES];
-        });
+        if (NGDeviceiPad)
+        {
+            [self setupWaveformView];
+        }
         
         [self configureView];
     }
@@ -46,6 +62,16 @@
     {
         self.detailDescriptionLabel.text = $(self.detailItem).description;
     }
+}
+
+
+- (void)setupWaveformView
+{
+    dispatch_async(dispatch_get_main_queue(), ^{
+        NGNotificationHash *hash = [NGNotificationHash hashWithType:NGNotificationTypePath andObject:_detailItem];
+        
+        [NSNotification notificationWithName:NGReadyNamePath andHash:hash shouldAutoPost:YES];
+    });
 }
 
 

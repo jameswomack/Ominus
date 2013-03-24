@@ -8,13 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@class WaveformImageVew;
+@class WaveformImageView;
 
 @interface NGDetailViewController : UIViewController <UISplitViewControllerDelegate>
 
 @property (strong, nonatomic) id detailItem;
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
-@property (weak, nonatomic) IBOutlet WaveformImageVew *waveformImageVIew;
+@property (weak, nonatomic) IBOutlet WaveformImageView *waveformImageView;
 
 
 @end

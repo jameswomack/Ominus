@@ -23,7 +23,7 @@
 		BD99401616FE3A6400460A3B /* Illusion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD99401516FE3A6400460A3B /* Illusion.mp3 */; };
 		BD99401916FE3AD000460A3B /* NGMP3Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = BD99401816FE3AD000460A3B /* NGMP3Bucket.m */; };
 		BD99401F16FE404E00460A3B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD99401E16FE404E00460A3B /* AVFoundation.framework */; };
-		BD99402316FE407300460A3B /* WaveformImageVew.m in Sources */ = {isa = PBXBuildFile; fileRef = BD99402216FE407300460A3B /* WaveformImageVew.m */; };
+		BD99402316FE407300460A3B /* WaveformImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD99402216FE407300460A3B /* WaveformImageView.m */; };
 		BDF9021F16FF4C9600F41708 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9021E16FF4C9600F41708 /* CoreMedia.framework */; };
 		BDF9022316FF58F000F41708 /* Searchin.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BDF9022216FF58F000F41708 /* Searchin.aiff */; };
 		BDF9022716FF5F8A00F41708 /* NGMediaController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9022616FF5F8A00F41708 /* NGMediaController.m */; };
@@ -60,8 +60,8 @@
 		BD99401716FE3AD000460A3B /* NGMP3Bucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGMP3Bucket.h; sourceTree = "<group>"; };
 		BD99401816FE3AD000460A3B /* NGMP3Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGMP3Bucket.m; sourceTree = "<group>"; };
 		BD99401E16FE404E00460A3B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		BD99402116FE407300460A3B /* WaveformImageVew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveformImageVew.h; sourceTree = "<group>"; };
-		BD99402216FE407300460A3B /* WaveformImageVew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveformImageVew.m; sourceTree = "<group>"; };
+		BD99402116FE407300460A3B /* WaveformImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveformImageView.h; sourceTree = "<group>"; };
+		BD99402216FE407300460A3B /* WaveformImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveformImageView.m; sourceTree = "<group>"; };
 		BDF9021E16FF4C9600F41708 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		BDF9022216FF58F000F41708 /* Searchin.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Searchin.aiff; sourceTree = "<group>"; };
 		BDF9022516FF5F8A00F41708 /* NGMediaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGMediaController.h; path = MediaControllers/NGMediaController.h; sourceTree = "<group>"; };
@@ -163,8 +163,8 @@
 		BD99402016FE407300460A3B /* Vendor (Modified) */ = {
 			isa = PBXGroup;
 			children = (
-				BD99402116FE407300460A3B /* WaveformImageVew.h */,
-				BD99402216FE407300460A3B /* WaveformImageVew.m */,
+				BD99402116FE407300460A3B /* WaveformImageView.h */,
+				BD99402216FE407300460A3B /* WaveformImageView.m */,
 			);
 			name = "Vendor (Modified)";
 			path = Vendor;
@@ -302,7 +302,7 @@
 				BD99400C16FE3A2200460A3B /* NGMasterViewController.m in Sources */,
 				BD99400F16FE3A2200460A3B /* NGDetailViewController.m in Sources */,
 				BD99401916FE3AD000460A3B /* NGMP3Bucket.m in Sources */,
-				BD99402316FE407300460A3B /* WaveformImageVew.m in Sources */,
+				BD99402316FE407300460A3B /* WaveformImageView.m in Sources */,
 				BDF9022716FF5F8A00F41708 /* NGMediaController.m in Sources */,
 				BDF9022B16FF616100F41708 /* NSNotification+NGNimbleCenter.m in Sources */,
 				BDF9022E16FF61CD00F41708 /* NGNotificationHash.m in Sources */,

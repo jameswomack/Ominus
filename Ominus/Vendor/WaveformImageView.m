@@ -8,7 +8,7 @@
 
 #import <CoreMedia/CoreMedia.h>
 
-#import "WaveformImageVew.h"
+#import "WaveformImageView.h"
 
 #define absX(x) (x<0?0-x:x)
 #define minMaxX(x,mn,mx) (x<=mn?mn:(x>=mx?mx:x))
@@ -18,7 +18,7 @@
 #define imageToData(x) UIImagePNGRepresentation(x)
 
 
-@interface WaveformImageVew ()
+@interface WaveformImageView ()
 
 - (void)establishInstanceLevelSharedInitializationTimeState;
 - (void)establishObservation;
@@ -29,7 +29,7 @@
 
 
 
-@implementation WaveformImageVew
+@implementation WaveformImageView
 
 
 

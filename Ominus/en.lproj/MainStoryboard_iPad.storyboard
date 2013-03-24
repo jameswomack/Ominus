@@ -36,7 +36,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3u-nQ-wlD" customClass="WaveformImageVew">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z3u-nQ-wlD" customClass="WaveformImageView">
                                 <color key="backgroundColor" red="0.70375504030000002" green="0.87703039049999998" blue="1" alpha="1" colorSpace="deviceRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="128" id="541-CB-uYf"/>
@@ -58,7 +58,7 @@
                     <navigationItem key="navigationItem" title="Detail" id="53"/>
                     <connections>
                         <outlet property="detailDescriptionLabel" destination="27" id="29"/>
-                        <outlet property="waveformImageVIew" destination="Z3u-nQ-wlD" id="IdI-a8-E8F"/>
+                        <outlet property="waveformImageView" destination="Z3u-nQ-wlD" id="5ei-Ei-GTC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>

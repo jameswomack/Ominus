@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WaveformImageVew : UIImageView
+@interface WaveformImageView : UIImageView
 
 #pragma mark Waveform drawing
 - (void)renderPNGAudioPictogram;
