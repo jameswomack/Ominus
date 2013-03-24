@@ -10,4 +10,7 @@
 
 @interface WaveformImageVew : UIImageView
 
+#pragma mark Waveform drawing
+- (void)renderPNGAudioPictogramLogForAsset:(AVURLAsset *)songAsset;
+
 @end

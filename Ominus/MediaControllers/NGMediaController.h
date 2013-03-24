@@ -6,8 +6,12 @@
 //  Copyright (c) 2013 Noble Gesture. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
-
 @interface NGMediaController : NSObject
+
+#pragma mark Initializers
++ (NGMediaController *)wake;
++ (NGMediaController *)mainController;
+
+@property (strong, nonatomic) AVPlayer *player;
 
 @end

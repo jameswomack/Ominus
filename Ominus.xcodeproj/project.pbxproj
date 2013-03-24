@@ -20,6 +20,18 @@
 		BD99400916FE3A2200460A3B /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD99400716FE3A2200460A3B /* MainStoryboard_iPad.storyboard */; };
 		BD99400C16FE3A2200460A3B /* NGMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD99400B16FE3A2200460A3B /* NGMasterViewController.m */; };
 		BD99400F16FE3A2200460A3B /* NGDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD99400E16FE3A2200460A3B /* NGDetailViewController.m */; };
+		BD99401616FE3A6400460A3B /* Illusion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BD99401516FE3A6400460A3B /* Illusion.mp3 */; };
+		BD99401916FE3AD000460A3B /* NGMP3Bucket.m in Sources */ = {isa = PBXBuildFile; fileRef = BD99401816FE3AD000460A3B /* NGMP3Bucket.m */; };
+		BD99401F16FE404E00460A3B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD99401E16FE404E00460A3B /* AVFoundation.framework */; };
+		BD99402316FE407300460A3B /* WaveformImageVew.m in Sources */ = {isa = PBXBuildFile; fileRef = BD99402216FE407300460A3B /* WaveformImageVew.m */; };
+		BDF9021F16FF4C9600F41708 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9021E16FF4C9600F41708 /* CoreMedia.framework */; };
+		BDF9022316FF58F000F41708 /* Searchin.aiff in Resources */ = {isa = PBXBuildFile; fileRef = BDF9022216FF58F000F41708 /* Searchin.aiff */; };
+		BDF9022716FF5F8A00F41708 /* NGMediaController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9022616FF5F8A00F41708 /* NGMediaController.m */; };
+		BDF9022B16FF616100F41708 /* NSNotification+NGNimbleCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9022A16FF616100F41708 /* NSNotification+NGNimbleCenter.m */; };
+		BDF9022E16FF61CD00F41708 /* NGNotificationHash.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9022D16FF61CD00F41708 /* NGNotificationHash.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BDF9023116FF625D00F41708 /* NGKit.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9023016FF625D00F41708 /* NGKit.m */; };
+		BDF9023716FF8B9500F41708 /* NSObject+NGNimbleCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = BDF9023616FF8B9500F41708 /* NSObject+NGNimbleCenter.m */; };
+		BDF9023916FF935C00F41708 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDF9023816FF935C00F41708 /* AudioToolbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +54,25 @@
 		BD99400B16FE3A2200460A3B /* NGMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGMasterViewController.m; sourceTree = "<group>"; };
 		BD99400D16FE3A2200460A3B /* NGDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGDetailViewController.h; sourceTree = "<group>"; };
 		BD99400E16FE3A2200460A3B /* NGDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NGDetailViewController.m; sourceTree = "<group>"; };
+		BD99401516FE3A6400460A3B /* Illusion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Illusion.mp3; sourceTree = "<group>"; };
+		BD99401716FE3AD000460A3B /* NGMP3Bucket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGMP3Bucket.h; sourceTree = "<group>"; };
+		BD99401816FE3AD000460A3B /* NGMP3Bucket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGMP3Bucket.m; sourceTree = "<group>"; };
+		BD99401E16FE404E00460A3B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BD99402116FE407300460A3B /* WaveformImageVew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaveformImageVew.h; sourceTree = "<group>"; };
+		BD99402216FE407300460A3B /* WaveformImageVew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaveformImageVew.m; sourceTree = "<group>"; };
+		BDF9021E16FF4C9600F41708 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		BDF9022216FF58F000F41708 /* Searchin.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = Searchin.aiff; sourceTree = "<group>"; };
+		BDF9022516FF5F8A00F41708 /* NGMediaController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NGMediaController.h; path = MediaControllers/NGMediaController.h; sourceTree = "<group>"; };
+		BDF9022616FF5F8A00F41708 /* NGMediaController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NGMediaController.m; path = MediaControllers/NGMediaController.m; sourceTree = "<group>"; };
+		BDF9022916FF616100F41708 /* NSNotification+NGNimbleCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSNotification+NGNimbleCenter.h"; path = "NGKit/NSNotification+NGNimbleCenter.h"; sourceTree = "<group>"; };
+		BDF9022A16FF616100F41708 /* NSNotification+NGNimbleCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSNotification+NGNimbleCenter.m"; path = "NGKit/NSNotification+NGNimbleCenter.m"; sourceTree = "<group>"; };
+		BDF9022C16FF61CD00F41708 /* NGNotificationHash.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGNotificationHash.h; sourceTree = "<group>"; };
+		BDF9022D16FF61CD00F41708 /* NGNotificationHash.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGNotificationHash.m; sourceTree = "<group>"; };
+		BDF9022F16FF625D00F41708 /* NGKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NGKit.h; sourceTree = "<group>"; };
+		BDF9023016FF625D00F41708 /* NGKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGKit.m; sourceTree = "<group>"; };
+		BDF9023516FF8B9500F41708 /* NSObject+NGNimbleCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+NGNimbleCenter.h"; path = "NGKit/NSObject+NGNimbleCenter.h"; sourceTree = "<group>"; };
+		BDF9023616FF8B9500F41708 /* NSObject+NGNimbleCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NGNimbleCenter.m"; path = "NGKit/NSObject+NGNimbleCenter.m"; sourceTree = "<group>"; };
+		BDF9023816FF935C00F41708 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +80,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDF9023916FF935C00F41708 /* AudioToolbox.framework in Frameworks */,
+				BDF9021F16FF4C9600F41708 /* CoreMedia.framework in Frameworks */,
+				BD99401F16FE404E00460A3B /* AVFoundation.framework in Frameworks */,
 				BD993FED16FE3A2100460A3B /* UIKit.framework in Frameworks */,
 				BD993FEF16FE3A2100460A3B /* Foundation.framework in Frameworks */,
 				BD993FF116FE3A2100460A3B /* CoreGraphics.framework in Frameworks */,
@@ -78,9 +112,12 @@
 		BD993FEB16FE3A2100460A3B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BD993FEC16FE3A2100460A3B /* UIKit.framework */,
-				BD993FEE16FE3A2100460A3B /* Foundation.framework */,
+				BDF9023816FF935C00F41708 /* AudioToolbox.framework */,
+				BD99401E16FE404E00460A3B /* AVFoundation.framework */,
 				BD993FF016FE3A2100460A3B /* CoreGraphics.framework */,
+				BDF9021E16FF4C9600F41708 /* CoreMedia.framework */,
+				BD993FEE16FE3A2100460A3B /* Foundation.framework */,
+				BD993FEC16FE3A2100460A3B /* UIKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -90,12 +127,12 @@
 			children = (
 				BD993FFB16FE3A2100460A3B /* NGAppDelegate.h */,
 				BD993FFC16FE3A2100460A3B /* NGAppDelegate.m */,
-				BD99400416FE3A2200460A3B /* MainStoryboard_iPhone.storyboard */,
-				BD99400716FE3A2200460A3B /* MainStoryboard_iPad.storyboard */,
-				BD99400A16FE3A2200460A3B /* NGMasterViewController.h */,
-				BD99400B16FE3A2200460A3B /* NGMasterViewController.m */,
-				BD99400D16FE3A2200460A3B /* NGDetailViewController.h */,
-				BD99400E16FE3A2200460A3B /* NGDetailViewController.m */,
+				BDF9022816FF612C00F41708 /* NGKit */,
+				BDF9022416FF5F3D00F41708 /* MediaControllers */,
+				BDF9023216FF760600F41708 /* Views */,
+				BDF9023416FF762E00F41708 /* ViewControllers */,
+				BDF9023316FF762600F41708 /* Models */,
+				BD99402016FE407300460A3B /* Vendor (Modified) */,
 				BD993FF316FE3A2100460A3B /* Supporting Files */,
 			);
 			path = Ominus;
@@ -104,6 +141,8 @@
 		BD993FF316FE3A2100460A3B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				BDF9022216FF58F000F41708 /* Searchin.aiff */,
+				BD99401516FE3A6400460A3B /* Illusion.mp3 */,
 				BD993FF416FE3A2100460A3B /* Ominus-Info.plist */,
 				BD993FF516FE3A2100460A3B /* InfoPlist.strings */,
 				BD993FF816FE3A2100460A3B /* main.m */,
@@ -113,6 +152,69 @@
 				BD99400216FE3A2100460A3B /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BD99402016FE407300460A3B /* Vendor (Modified) */ = {
+			isa = PBXGroup;
+			children = (
+				BD99402116FE407300460A3B /* WaveformImageVew.h */,
+				BD99402216FE407300460A3B /* WaveformImageVew.m */,
+			);
+			name = "Vendor (Modified)";
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		BDF9022416FF5F3D00F41708 /* MediaControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9022516FF5F8A00F41708 /* NGMediaController.h */,
+				BDF9022616FF5F8A00F41708 /* NGMediaController.m */,
+			);
+			name = MediaControllers;
+			sourceTree = "<group>";
+		};
+		BDF9022816FF612C00F41708 /* NGKit */ = {
+			isa = PBXGroup;
+			children = (
+				BDF9022F16FF625D00F41708 /* NGKit.h */,
+				BDF9023016FF625D00F41708 /* NGKit.m */,
+				BDF9022916FF616100F41708 /* NSNotification+NGNimbleCenter.h */,
+				BDF9022A16FF616100F41708 /* NSNotification+NGNimbleCenter.m */,
+				BDF9022C16FF61CD00F41708 /* NGNotificationHash.h */,
+				BDF9022D16FF61CD00F41708 /* NGNotificationHash.m */,
+				BDF9023516FF8B9500F41708 /* NSObject+NGNimbleCenter.h */,
+				BDF9023616FF8B9500F41708 /* NSObject+NGNimbleCenter.m */,
+			);
+			name = NGKit;
+			sourceTree = "<group>";
+		};
+		BDF9023216FF760600F41708 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BD99400416FE3A2200460A3B /* MainStoryboard_iPhone.storyboard */,
+				BD99400716FE3A2200460A3B /* MainStoryboard_iPad.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BDF9023316FF762600F41708 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BD99401716FE3AD000460A3B /* NGMP3Bucket.h */,
+				BD99401816FE3AD000460A3B /* NGMP3Bucket.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		BDF9023416FF762E00F41708 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BD99400A16FE3A2200460A3B /* NGMasterViewController.h */,
+				BD99400B16FE3A2200460A3B /* NGMasterViewController.m */,
+				BD99400D16FE3A2200460A3B /* NGDetailViewController.h */,
+				BD99400E16FE3A2200460A3B /* NGDetailViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +275,8 @@
 				BD99400316FE3A2100460A3B /* Default-568h@2x.png in Resources */,
 				BD99400616FE3A2200460A3B /* MainStoryboard_iPhone.storyboard in Resources */,
 				BD99400916FE3A2200460A3B /* MainStoryboard_iPad.storyboard in Resources */,
+				BD99401616FE3A6400460A3B /* Illusion.mp3 in Resources */,
+				BDF9022316FF58F000F41708 /* Searchin.aiff in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +291,13 @@
 				BD993FFD16FE3A2100460A3B /* NGAppDelegate.m in Sources */,
 				BD99400C16FE3A2200460A3B /* NGMasterViewController.m in Sources */,
 				BD99400F16FE3A2200460A3B /* NGDetailViewController.m in Sources */,
+				BD99401916FE3AD000460A3B /* NGMP3Bucket.m in Sources */,
+				BD99402316FE407300460A3B /* WaveformImageVew.m in Sources */,
+				BDF9022716FF5F8A00F41708 /* NGMediaController.m in Sources */,
+				BDF9022B16FF616100F41708 /* NSNotification+NGNimbleCenter.m in Sources */,
+				BDF9022E16FF61CD00F41708 /* NGNotificationHash.m in Sources */,
+				BDF9023116FF625D00F41708 /* NGKit.m in Sources */,
+				BDF9023716FF8B9500F41708 /* NSObject+NGNimbleCenter.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,6 +430,7 @@
 				BD99401416FE3A2200460A3B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

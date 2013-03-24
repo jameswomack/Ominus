@@ -6,8 +6,17 @@
 //  Copyright (c) 2013 Noble Gesture. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+@class NGNotificationHash;
 
-@interface NSNotification (NGNimbleCenter)
+@interface NSNotification (NGNimbleCenterAdditions)
+
+#pragma mark Skipping unused parameters and intermediary steps in initialization
++ (NSNotification *)notificationWithName:(NSString *)name andHash:(NGNotificationHash *)hash;
+
+#pragma mark Auto-self-posting notifications
++ (NSNotification *)notificationWithName:(NSString *)name andHash:(NGNotificationHash *)hash shouldAutoPost:(BOOL)shouldAutoPost;
+
+#pragma mark Dynamic property declarations
+@property (readonly) NGNotificationHash *hash;  // Dynamic
 
 @end

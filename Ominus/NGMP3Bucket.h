@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface NGMP3Bucket : NSObject
-
++ (NSSet *)paths;
 @end

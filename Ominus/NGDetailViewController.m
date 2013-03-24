@@ -8,6 +8,8 @@
 
 #import "NGDetailViewController.h"
 
+#import "WaveformImageVew.h"
+
 @interface NGDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
 - (void)configureView;
@@ -19,39 +21,33 @@
 
 - (void)setDetailItem:(id)newDetailItem
 {
-    if (_detailItem != newDetailItem) {
+    if (_detailItem != newDetailItem)
+    {
         _detailItem = newDetailItem;
         
-        // Update the view.
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NGNotificationHash *hash = [NGNotificationHash hashWithType:NGNotificationTypePath andObject:_detailItem];
+            
+            [NSNotification notificationWithName:NGReadyNamePath andHash:hash shouldAutoPost:YES];
+        });
+        
         [self configureView];
     }
 
-    if (self.masterPopoverController != nil) {
+    if (self.masterPopoverController != nil)
+    {
         [self.masterPopoverController dismissPopoverAnimated:YES];
     }        
 }
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    if (self.detailItem)
+    {
+        self.detailDescriptionLabel.text = $(self.detailItem).description;
     }
 }
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [self configureView];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
 
 #pragma mark - Split view
 
@@ -64,7 +60,6 @@
 
 - (void)splitViewController:(UISplitViewController *)splitController willShowViewController:(UIViewController *)viewController invalidatingBarButtonItem:(UIBarButtonItem *)barButtonItem
 {
-    // Called when the view is shown again in the split view, invalidating the button and popover controller.
     [self.navigationItem setLeftBarButtonItem:nil animated:YES];
     self.masterPopoverController = nil;
 }

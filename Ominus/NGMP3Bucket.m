@@ -10,4 +10,15 @@
 
 @implementation NGMP3Bucket
 
++ (NSSet *)paths
+{
+    __block NSSet *paths;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        NSString *mp3Path = NGBundleAIFFPath(@"Searchin");
+        paths = [NSSet setWithObject:mp3Path];
+    });
+    return paths;
+}
+
 @end

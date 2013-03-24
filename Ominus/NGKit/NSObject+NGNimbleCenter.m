@@ -8,6 +8,20 @@
 
 #import "NSObject+NGNimbleCenter.h"
 
-@implementation NSObject (NGNimbleCenter)
+
+@implementation NSObject (NGNimbleCenterAdditions)
+
+
+
+#pragma —
+#pragma mark Skipping unused parameters and intermediary steps in initialization
+
+
+- (void)observeName:(NSString *)name usingBlock:(void (^)(NSNotification *))block
+{
+    [NGNimbleCenter addObserverForName:name object:nil queue:NULL usingBlock:block];
+}
+
+
 
 @end

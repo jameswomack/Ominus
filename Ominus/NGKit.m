@@ -7,7 +7,3 @@
 //
 
 #import "NGKit.h"
-
-@implementation NGKit
-
-@end

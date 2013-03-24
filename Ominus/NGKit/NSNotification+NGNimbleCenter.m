@@ -8,6 +8,48 @@
 
 #import "NSNotification+NGNimbleCenter.h"
 
-@implementation NSNotification (NGNimbleCenter)
+
+@implementation NSNotification (NGNimbleCenterAdditions)
+
+@dynamic hash;
+
+
+
+#pragma mark -
+#pragma mark Skipping unused parameters and intermediary steps in initialization
+
+
++ (NSNotification *)notificationWithName:(NSString *)name andHash:(NGNotificationHash *)hash
+{
+    return [self notificationWithName:name andHash:hash shouldAutoPost:YES];
+}
+
+
+#pragma mark -
+#pragma mark Auto-self-posting notifications
++ (NSNotification *)notificationWithName:(NSString *)name andHash:(NGNotificationHash *)hash shouldAutoPost:(BOOL)shouldAutoPost
+{
+    NSNotification *note = [self notificationWithName:name object:nil userInfo:hash.wrapped];
+    
+    if (shouldAutoPost)
+    {
+        [NGNimbleCenter postNotification:note];
+    }
+    
+    return note;
+}
+
+
+
+#pragma mark -
+#pragma mark Dynamic property implementations
+
+
+- (NGNotificationHash *)hash
+{
+    return self.userInfo[NGNotificationHashKey];
+}
+
+
 
 @end

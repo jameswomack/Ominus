@@ -8,6 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (NGNimbleCenter)
+@interface NSObject (NGNimbleCenterAdditions)
+
+#pragma mark Skipping unused parameters and intermediary steps in initialization
+- (void)observeName:(NSString *)name usingBlock:(void (^)(NSNotification *))block;
 
 @end
