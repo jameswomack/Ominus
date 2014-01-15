@@ -28,7 +28,7 @@
 //  Place the opening block brace on the same line as the parameter it is being passed through
 
 // Use camelCase for inline variable and property names
-// Use TileCamelCase for class, function, type names
+// Use PascalCase for class, function, type names
 // Namespace all classes, categories, protocols and public constants
 // Use method names that clearly state exactly what the methods does
 // Consider alternate namespaced getters/setters on "Vendor" (incl. Apple) category ...
